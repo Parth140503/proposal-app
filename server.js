@@ -10,6 +10,7 @@ app.use(express.json());
 // 💖 MAIN PAGE
 app.get('/', (req, res) => {
     res.send(`
+    <!DOCTYPE html>
     <html>
     <head>
         <title>For Harnisha ❤️</title>
@@ -26,8 +27,10 @@ app.get('/', (req, res) => {
                 font-family:Arial;
                 text-align:center;
             }
+
             h1 { font-size:40px; }
             h2 { font-size:60px; text-shadow:0 0 20px pink; }
+
             button {
                 padding:15px 30px;
                 font-size:20px;
@@ -35,13 +38,18 @@ app.get('/', (req, res) => {
                 border:none;
                 border-radius:10px;
                 cursor:pointer;
+                transition:0.3s;
             }
+
             .yes { background:#00ffcc; color:black; }
             .no { background:#ff3333; color:white; }
+
+            button:hover { transform:scale(1.1); }
         </style>
     </head>
 
     <body>
+
         <h1>Harnisha ❤️</h1>
         <h1>From the moment you came into my life...</h1>
         <h1>Everything became beautiful ✨</h1>
@@ -50,6 +58,7 @@ app.get('/', (req, res) => {
 
         <button class="yes" onclick="window.location.href='/yes'">YES 💖</button>
         <button class="no">NO 😢</button>
+
     </body>
     </html>
     `);
@@ -59,6 +68,7 @@ app.get('/', (req, res) => {
 // 💖 YES PAGE
 app.get('/yes', (req, res) => {
     res.send(`
+    <!DOCTYPE html>
     <html>
     <body style="margin:0; height:100vh; display:flex; justify-content:center; align-items:center; flex-direction:column; background:black; color:white; font-family:Arial; text-align:center;">
     
@@ -76,7 +86,7 @@ app.get('/yes', (req, res) => {
 });
 
 
-// 🚀 SERVER (IMPORTANT FOR RENDER)
+// 🔥 IMPORTANT FOR RENDER (DO NOT CHANGE)
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
